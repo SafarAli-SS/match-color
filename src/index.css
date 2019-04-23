@@ -49,6 +49,8 @@ code {
   outline: none;
   cursor: pointer;
   border-radius: 3px;
+  box-shadow: 4px 4px 8px 1px #3071a9;
+  font-size: 120%;
 }
 
 .inputs {
@@ -84,9 +86,13 @@ code {
 
 .buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin-top: 3rem;
+}
+
+.btn-reset {
+  margin-right: 2rem;
 }
 
 .btn-show,
@@ -291,4 +297,53 @@ input[type="range"]::-ms-fill-upper {
 }
 #blue:focus::-ms-fill-upper {
   background: blue;
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+  .left-color,
+  .right-color {
+    width: 15rem;
+    height: 20rem;
+  }
+  .ranges {
+    width: 50%;
+    margin: 0 1rem;
+  }
+  .btn {
+    width: 2rem;
+    height: 2rem;
+  }
+  .btn-reset,
+  .btn-show {
+    width: 3rem;
+    font-size: 100%;
+    padding: 3px;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-top: -7px;
+  }
+
+  input[type="range"]::-moz-range-track {
+    height: 5px;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 5px;
+  }
+
+  .btn-dec {
+    left: 2rem;
+  }
+
+  .btn-inc {
+    right: 2rem;
+  }
+
+  .buttons {
+    margin-top: 1.5rem;
+  }
 }

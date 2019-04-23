@@ -185,7 +185,6 @@ export class Inputs extends Component {
               this.handleShow();
             }}
           />
-          <p className="hint-text" />
         </div>
       </div>
     );
