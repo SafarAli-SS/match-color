@@ -8,6 +8,7 @@ export const RedInputRange = props => {
       max="255"
       id="red"
       onChange={props.handleChange}
+      value={props.value}
     />
   );
 };
@@ -20,6 +21,7 @@ export const GreenInputRange = props => {
       max="255"
       id="green"
       onChange={props.handleChange}
+      value={props.value}
     />
   );
 };
@@ -32,6 +34,7 @@ export const BlueInputRange = props => {
       max="255"
       id="blue"
       onChange={props.handleChange}
+      value={props.value}
     />
   );
 };
