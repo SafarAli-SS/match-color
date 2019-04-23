@@ -24,15 +24,13 @@ code {
   height: 20rem;
   border: 1px solid #000000;
   border-radius: 4rem;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .left-innertext,
 .right-innertext {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: #fff;
 }
 
@@ -324,15 +322,15 @@ input[type="range"]::-ms-fill-upper {
     height: 18px;
     width: 18px;
     border-radius: 50%;
-    margin-top: -7px;
+    margin-top: -6px;
   }
 
   input[type="range"]::-moz-range-track {
-    height: 5px;
+    height: 8px;
   }
 
   input[type="range"]::-webkit-slider-runnable-track {
-    height: 5px;
+    height: 8px;
   }
 
   .btn-dec {
@@ -345,5 +343,27 @@ input[type="range"]::-ms-fill-upper {
 
   .buttons {
     margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+  .inputs {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-color,
+  .right-color {
+    width: 100%;
+    height: 5rem;
+  }
+  .ranges {
+    width: 90%;
+    margin: 0 1rem;
   }
 }

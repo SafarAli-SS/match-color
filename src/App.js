@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Heading from "./components/heading/heading";
+import Heading from "./components/heading";
 
 import Inputs from "./components/Inputs/inputs";
 

@@ -1,19 +1,11 @@
 import React, { Component } from "react";
-import {
-  RedInputRange,
-  GreenInputRange,
-  BlueInputRange
-} from "./input-range/input-range";
-import BtnDec from "./btn-dec/BtnDec";
-import BtnInc from "./btn-inc/BtnInc";
-import {
-  RedInputValue,
-  GreenInputValue,
-  BlueInputValue
-} from "./input-value/InputValue";
-import { RightColor } from "../../components/right-color/rightColor";
-import { LeftColor } from "../../components/left-color/leftColor";
-import { Reset, Show } from "../buttons/buttons";
+import { RedInputRange, GreenInputRange, BlueInputRange } from "./input-range";
+import BtnDec from "./BtnDec";
+import BtnInc from "./BtnInc";
+import { RedInputValue, GreenInputValue, BlueInputValue } from "./InputValue";
+import { RightColor } from "./rightColor";
+import { LeftColor } from "./leftColor";
+import { Reset, Show } from "./buttons";
 
 export class Inputs extends Component {
   state = {
@@ -105,7 +97,18 @@ export class Inputs extends Component {
       backgroundColor: rightColorValue
     };
     return (
-      <div>
+      <div className="container">
+        {leftColorValue === rightColorValue && (
+          <h1
+            style={{
+              textAlign: "center",
+              color: leftColorValue,
+              marginTop: "-1rem"
+            }}
+          >
+            Correct!!!
+          </h1>
+        )}
         <div className="inputs">
           <div>
             <LeftColor style={leftStyle} leftColorValue={leftColorValue} />
